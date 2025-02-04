@@ -4,7 +4,13 @@ $Repit=false;
 $host="localhost";
 $user="root";
 $password="";
+$dbname="periodicos";
 
-$link= mysqli_connect($host,$user,$password);
-$tildes=$link->query("SET NAMES 'utf8'");
-mysqli_select_db($link,'periodicos');
+$conn_string = "host=$host dbname=$dbname user=$user password=$password";
+$link = pg_connect($conn_string);
+
+if (!$link) {
+    echo "Error: Unable to open database\n";
+} else {
+    echo "Opened database successfully\n";
+}

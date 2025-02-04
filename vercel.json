@@ -1,6 +1,6 @@
 {
     "functions": {
-        "api/index.php": {
+        "PHP-lector-RSS-main/index.php": {
             "runtime": "vercel-php@0.7.1"
         }
     },

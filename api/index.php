@@ -3,130 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>PHP RSS Filter</title>
-               <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                background-color: #f4f4f9;
-                color: #333;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #00796b;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            color: #00796b;
+        }
+
+        select, input[type="date"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #b2dfdb;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background: #00796b;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background: #004d40;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
             }
-        
-            form {
-                background: #fff;
-                padding: 40px;
-                border-radius: 8px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                max-width: 600px;
-                width: 100%;
-            }
-        
-            fieldset {
-                border: none;
-                padding: 0;
-                margin: 0;
-            }
-        
-            legend {
-                font-size: 1.8em;
-                font-weight: bold;
-                color: #444;
-                margin-bottom: 25px;
-            }
-        
-            label {
-                font-weight: bold;
-                display: block;
-                margin-top: 20px;
-                color: #555;
-            }
-        
-            select, input[type="date"], input[type="text"] {
-                width: 100%;
-                padding: 12px;
-                margin-top: 10px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-            }
-        
-            input[type="submit"] {
-                background: #007bff;
-                color: #fff;
-                padding: 14px 22px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                font-size: 1.2em;
-                margin-top: 25px;
-                width: 100%;
-            }
-        
-            input[type="submit"]:hover {
-                background: #0056b3;
-            }
-        
-            table {
-                width: 100%;
-                margin-top: 35px;
-                border-collapse: collapse;
-                background: #fff;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            }
-        
-            th, td {
-                padding: 18px;
-                text-align: left;
-                border-bottom: 1px solid #ddd;
-            }
-        
-            th {
-                background: #007bff;
-                color: #fff;
-                text-transform: uppercase;
-            }
-        
-            tr:hover {
-                background: #f1f1f1;
-            }
-        
-            a {
-                color: #007bff;
-                text-decoration: none;
-            }
-        
-            a:hover {
-                text-decoration: underline;
-            }
-        
-            @media (max-width: 768px) {
-                form {
-                    padding: 25px;
-                }
-                table {
-                    width: 100%;
-                    overflow-x: auto;
-                }
-            }
-        </style>
+        }
+    </style>
 </head>
 <body>
 
-<form action="index.php" method="GET">
-    <fieldset>
-        <legend>FILTRO</legend>
-        <label>PERIÓDICO:</label>
-        <select name="periodicos">
+<div class="container">
+    <h1>Filtro RSS</h1>
+    <form action="index.php" method="GET">
+        <label for="periodicos">Periódico:</label>
+        <select id="periodicos" name="periodicos">
             <option value="elpais">El País</option>
             <option value="elmundo">El Mundo</option>
         </select>
 
-        <label>CATEGORÍA:</label>
-        <select name="categoria">
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria">
             <option value=""></option>
             <option value="Política">Política</option>
             <option value="Deportes">Deportes</option>
@@ -139,15 +96,15 @@
             <option value="Justicia">Justicia</option>
         </select>
 
-        <label>FECHA:</label>
-        <input type="date" name="fecha">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha">
 
-        <label>AMPLIAR FILTRO (descripción contenga la palabra):</label>
-        <input type="text" name="buscar">
+        <label for="buscar">Ampliar filtro (descripción contenga la palabra):</label>
+        <input type="text" id="buscar" name="buscar">
 
         <input type="submit" name="filtrar" value="Filtrar">
-    </fieldset>
-</form>
+    </form>
+</div>
 
 </body>
 </html>

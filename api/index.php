@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>PHP RSS Filter</title>
-        <style>
+               <style>
             body {
-                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                background-color: #e9ecef;
-                color: #212529;
+                font-family: 'Arial', sans-serif;
+                background-color: #f4f4f9;
+                color: #333;
                 margin: 0;
                 padding: 0;
                 display: flex;
@@ -15,97 +15,97 @@
                 align-items: center;
                 height: 100vh;
             }
-    
+        
             form {
-                background: #ffffff;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                max-width: 500px;
+                background: #fff;
+                padding: 40px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
                 width: 100%;
             }
-    
+        
             fieldset {
                 border: none;
                 padding: 0;
                 margin: 0;
             }
-    
+        
             legend {
-                font-size: 1.5em;
-                font-weight: 600;
-                color: #343a40;
-                margin-bottom: 20px;
+                font-size: 1.8em;
+                font-weight: bold;
+                color: #444;
+                margin-bottom: 25px;
             }
-    
+        
             label {
-                font-weight: 600;
+                font-weight: bold;
                 display: block;
-                margin-top: 15px;
-                color: #495057;
+                margin-top: 20px;
+                color: #555;
             }
-    
+        
             select, input[type="date"], input[type="text"] {
                 width: 100%;
-                padding: 10px;
-                margin-top: 8px;
-                border: 1px solid #ced4da;
-                border-radius: 5px;
+                padding: 12px;
+                margin-top: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
                 box-sizing: border-box;
             }
-    
+        
             input[type="submit"] {
-                background: #28a745;
-                color: #ffffff;
-                padding: 12px 20px;
+                background: #007bff;
+                color: #fff;
+                padding: 14px 22px;
                 border: none;
-                border-radius: 5px;
+                border-radius: 4px;
                 cursor: pointer;
-                font-size: 1.1em;
-                margin-top: 20px;
+                font-size: 1.2em;
+                margin-top: 25px;
                 width: 100%;
             }
-    
+        
             input[type="submit"]:hover {
-                background: #218838;
+                background: #0056b3;
             }
-    
+        
             table {
                 width: 100%;
-                margin-top: 30px;
+                margin-top: 35px;
                 border-collapse: collapse;
-                background: #ffffff;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                background: #fff;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
-    
+        
             th, td {
-                padding: 15px;
+                padding: 18px;
                 text-align: left;
-                border-bottom: 1px solid #dee2e6;
+                border-bottom: 1px solid #ddd;
             }
-    
+        
             th {
                 background: #007bff;
-                color: #ffffff;
+                color: #fff;
                 text-transform: uppercase;
             }
-    
+        
             tr:hover {
-                background: #f8f9fa;
+                background: #f1f1f1;
             }
-    
+        
             a {
                 color: #007bff;
                 text-decoration: none;
             }
-    
+        
             a:hover {
                 text-decoration: underline;
             }
-    
+        
             @media (max-width: 768px) {
                 form {
-                    padding: 20px;
+                    padding: 25px;
                 }
                 table {
                     width: 100%;

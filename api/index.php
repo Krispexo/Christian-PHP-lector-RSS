@@ -119,10 +119,6 @@
     {
         $result = pg_query($link, $sql);
 
-        if (! $result) {
-            echo "Error en la consulta SQL: " . pg_last_error($link);
-            return;
-        }
 
         while ($arrayFiltro = pg_fetch_assoc($result)) {
             echo "<tr>";
